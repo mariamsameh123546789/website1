@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Tahoma,sans-serif;
+}
+
+body{
+    background:#f8f4ee;
+    text-align:center;
+    min-height:100vh;
+    height:100svh;
+    padding:14px 28px 22px;
+    overflow:hidden;
+    display:grid;
+    grid-template-rows:auto minmax(0,1fr) auto;
+    gap:12px;
+}
+
+h1{
+    color:#6b4f3b;
+    font-family:"Aref Ruqaa","Amiri","Cairo",Tahoma,sans-serif;
+    font-size:clamp(24px,3vw,36px);
+    font-weight:700;
+    line-height:1.2;
+    letter-spacing:0;
+    text-shadow:0 2px 8px rgba(107,79,59,.16);
+}
+
+.header-image{
+    min-height:0;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.header-image img{
+    width:min(100%,960px);
+    height:100%;
+    max-height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:clamp(180px,21vw,250px);
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:#6b4f3b;
+    box-shadow:0 8px 18px rgba(75,52,36,.28);
+}
+
+.card h2{
+    color:#6b4f3b;
+    margin-bottom:10px;
+    transition:.3s;
+}
+
+.card p{
+    color:#555;
+    transition:.3s;
+}
+
+.card:hover h2,
+.card:hover p{
+    color:#fff;
+}
+
+@media (max-width:700px){
+    body{
+        padding:10px 12px 14px;
+        gap:8px;
+    }
+
+    .container{
+        gap:10px;
+    }
+
+    .card{
+        width:calc(50% - 5px);
+        padding:14px 8px;
+        border-radius:10px;
+    }
+
+    .card h2{
+        font-size:16px;
+    }
+
+    .card p{
+        font-size:13px;
+    }
+}
+
+@media (max-width:420px){
+    body{
+        padding:8px 8px 10px;
+    }
+
+    .header-image img{
+        width:100%;
+    }
+
+    .card{
+        padding:12px 6px;
+    }
+
+    .card h2{
+        font-size:14px;
+        margin-bottom:6px;
+    }
+
+    .card p{
+        font-size:12px;
+    }
+}
+
+@media (max-height:560px){
+    body{
+        height:auto;
+        min-height:100svh;
+        overflow:auto;
+    }
+
+    .header-image{
+        max-height:45vh;
+    }
+}
